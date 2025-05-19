@@ -23,8 +23,8 @@ A **full-stack chatbot** application built with **Next.js**, **Supabase**, and t
 
 2. **Chat Interface**
 
-![Chat Interface](![image](https://github.com/user-attachments/assets/bfa7279f-c40e-4d0c-92f0-aca2e05ffb54)
-)
+![image](https://github.com/user-attachments/assets/02ad352c-b5b1-4485-bc7f-635a159a5972)
+
 
 ---
 
