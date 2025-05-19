@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gemini PDF Chatbot
+
+A full-stack chatbot application built with Next.js, Supabase, and the Gemini API.  
+Users can register, log in, chat with an AI assistant, and upload PDFs to extract and discuss their content.  
+All chat history is securely stored per user.
+
+---
+
+## 🚀 Live Demo
+
+[View the deployed app on Render](https://your-app.onrender.com)
+
+---
+
+## Features
+
+- **User Authentication:** Register, login, and logout securely (Supabase Auth)
+- **Chatbot:** Powered by Gemini API for intelligent responses
+- **PDF Upload:** Upload a PDF, extract its text, and chat about its content
+- **Chat History:** All conversations are stored and viewable per user
+- **Responsive UI:** Clean, modern interface with PDF upload as a pin/clipart icon
+
+---
+
+## Tech Stack
+
+- **Frontend:** Next.js (React)
+- **Backend/API:** Next.js API routes
+- **Database:** PostgreSQL (via Supabase)
+- **Authentication:** Supabase Auth (JWT)
+- **PDF Parsing:** `pdf-parse` (Node.js)
+- **AI Integration:** Gemini API
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+git clone https://github.com/SAMMILLERR/ai-chatbot-with-pdf-upload.git
+cd ai-chatbot-with-pdf-upload
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Configure environment variables
 
-## Learn More
+- Copy `.env.example` to `.env.local` and fill in your secrets:
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+cp .env.example .env.local
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Set your Supabase, Gemini, and database credentials.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Run locally
 
-## Deploy on Vercel
+```sh
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Visit [http://localhost:3000](http://localhost:3000)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Database Setup
+
+- See [`lib/schema.sql`](lib/schema.sql) for the PostgreSQL schema.
+- Run the SQL script on your Supabase/Postgres instance.
+
+---
+
+## Sample Chat Responses
+
+See [`sample_chat.txt`](sample_chat.txt) for example user queries and chatbot responses.
+
+---
+
+## Deployment
+
+This app is deployed on [Render](https://render.com/):
+
+- Connect your GitHub repo to Render
+- Add all environment variables from `.env.example` in the Render dashboard
+- Set build command: `npm install && npm run build`
+- Set start command: `npm start`
+- Set root directory if your app is in a subfolder
+
+---
+
+## Citations
+
+- [Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
+- [Supabase Documentation](https://supabase.com/docs)
+- [pdf-parse](https://www.npmjs.com/package/pdf-parse)
+- [Next.js Documentation](https://nextjs.org/docs)
+
+---
+
+
