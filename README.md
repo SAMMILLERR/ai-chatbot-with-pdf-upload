@@ -1,105 +1,128 @@
+
+
+
 # Gemini PDF Chatbot
 
-A full-stack chatbot application built with Next.js, Supabase, and the Gemini API.  
-Users can register, log in, chat with an AI assistant, and upload PDFs to extract and discuss their content.  
-All chat history is securely stored per user.
+[![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE) [![Version](https://img.shields.io/badge/version-1.0.0-blue)]()
+
+A **full-stack chatbot** application built with **Next.js**, **Supabase**, and the **Gemini API**. Users can register, authenticate, upload PDF documents, and interact with an AI assistant whose responses are stored securely.
 
 ---
 
 ## 🚀 Live Demo
 
-[View the deployed app on Render](https://ai-chatbot-with-pdf-upload-1.onrender.com)
+[🌐 View Live App on Render](https://ai-chatbot-with-pdf-upload-1.onrender.com)
 
 ---
 
-## Features
+## 🎯 Features
 
-- **User Authentication:** Register, login, and logout securely (Supabase Auth)
-- **Chatbot:** Powered by Gemini API for intelligent responses
-- **PDF Upload:** Upload a PDF, extract its text, and chat about its content
-- **Chat History:** All conversations are stored and viewable per user
-- **Responsive UI:** Clean, modern interface with PDF upload as a pin/clipart icon
-
----
-
-## Tech Stack
-
-- **Frontend:** Next.js (React)
-- **Backend/API:** Next.js API routes
-- **Database:** PostgreSQL (via Supabase)
-- **Authentication:** Supabase Auth (JWT)
-- **PDF Parsing:** `pdf-parse` (Node.js)
-- **AI Integration:** Gemini API
+- **Secure Authentication**: Email/password sign-up and login via Supabase Auth  
+- **AI Chatbot**: Conversational interface powered by Google Gemini (`chat-bison-001`)  
+- **PDF Uploader**: Extract text from PDFs and chat about document content  
+- **Persistent Chat**: Store and retrieve all user–bot exchanges in PostgreSQL  
+- **Responsive UI**: Modern layout with CSS Modules for scoped styling  
 
 ---
 
-## Getting Started
+## 🛠️ Tech Stack
 
-### 1. Clone the repository
+| Layer          | Technology                         |
+| -------------- | ---------------------------------- |
+| Frontend       | Next.js, React                     |
+| Styling        | CSS Modules                        |
+| Authentication | Supabase Auth                      |
+| API            | Next.js API Routes (Node.js)       |
+| Database       | PostgreSQL (Render-hosted)         |
+| PDF Parsing    | `pdf-parse`                        |
+| AI Integration | Google Gemini API (REST)           |
 
-```sh
-git clone https://github.com/SAMMILLERR/ai-chatbot-with-pdf-upload.git
-cd ai-chatbot-with-pdf-upload
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/SAMMILLERR/ai-chatbot-with-pdf-upload.git
+   cd ai-chatbot-with-pdf-upload
+
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure environment variables**
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+   Fill in your keys:
+
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=
+   GEMINI_API_KEY=
+   DATABASE_URL=
+   ```
+
+4. **Set up the database schema**
+
+   ```bash
+   psql "$DATABASE_URL" -f db/schema.sql
+   ```
+
+5. **Run locally**
+
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 📂 Project Structure
+
+```
+├── components/        # Reusable UI components
+├── lib/               # Supabase client & utilities
+├── pages/
+│   ├── api/           # Serverless API routes
+│   ├── auth/          # Registration & login pages
+│   ├── chat.js        # Main chat interface
+│   └── _app.js        # App wrapper with auth provider
+├── styles/            # CSS Modules & global styles
+├── db/                # SQL migrations (schema.sql)
+├── scripts/           # Utility scripts (list models, tests)
+└── sample_chat.txt    # Example user–bot dialogues
 ```
 
-### 2. Install dependencies
+---
 
-```sh
-npm install
-```
+## 💡 Usage
 
-### 3. Configure environment variables
-
-- Copy `.env.example` to `.env.local` and fill in your secrets:
-
-```sh
-cp .env.example .env.local
-```
-
-- Set your Supabase, Gemini, and database credentials.
-
-### 4. Run locally
-
-```sh
-npm run dev
-```
-
-Visit [http://localhost:3000](http://localhost:3000)
+1. **Register** at `/auth/register`
+2. **Log in** at `/auth/login`
+3. **Upload** a PDF to set context
+4. **Chat** with the AI assistant
+5. **Review** your chat history
 
 ---
 
-## Database Setup
+## 📖 References
 
-- See [`lib/schema.sql`](lib/schema.sql) for the PostgreSQL schema.
-- Run the SQL script on your Supabase/Postgres instance.
-
----
-
-## Sample Chat Responses
-
-See [`sample_chat.txt`](sample_chat.txt) for example user queries and chatbot responses.
+* [Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
+* [Supabase Documentation](https://supabase.com/docs)
+* [pdf-parse (npm)](https://www.npmjs.com/package/pdf-parse)
+* [Next.js Documentation](https://nextjs.org/docs)
 
 ---
 
-## Deployment
 
-This app is deployed on [Render](https://render.com/):
 
-- Connect your GitHub repo to Render
-- Add all environment variables from `.env.example` in the Render dashboard
-- Set build command: `npm install && npm run build`
-- Set start command: `npm start`
-- Set root directory if your app is in a subfolder
 
----
-
-## Citations
-
-- [Gemini API Documentation](https://ai.google.dev/gemini-api/docs)
-- [Supabase Documentation](https://supabase.com/docs)
-- [pdf-parse](https://www.npmjs.com/package/pdf-parse)
-- [Next.js Documentation](https://nextjs.org/docs)
-
----
 
 
