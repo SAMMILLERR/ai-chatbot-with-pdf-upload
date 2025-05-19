@@ -8,7 +8,7 @@ All chat history is securely stored per user.
 
 ## 🚀 Live Demo
 
-[View the deployed app on Render](https://your-app.onrender.com)
+[View the deployed app on Render](https://ai-chatbot-with-pdf-upload-1.onrender.com)
 
 ---
 
