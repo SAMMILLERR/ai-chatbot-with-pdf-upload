@@ -18,8 +18,7 @@ A **full-stack chatbot** application built with **Next.js**, **Supabase**, and t
 
 1. **Login Page**
 
-![Login Page](![image](https://github.com/user-attachments/assets/bc43b841-7a0f-4e9e-ac52-6feee3e3d515)
- )
+![Login Page](![image](https://github.com/user-attachments/assets/4dd409c4-8277-4cb8-a6c6-62d455a0f250))
 
 2. **Chat Interface**
 
