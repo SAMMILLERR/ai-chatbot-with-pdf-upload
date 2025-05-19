@@ -62,10 +62,16 @@ A **full-stack chatbot** application built with **Next.js**, **Supabase**, and t
    Fill in your keys:
 
    ```
-   NEXT_PUBLIC_SUPABASE_URL=
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=
-   GEMINI_API_KEY=
-   DATABASE_URL=
+   NEXT_PUBLIC_SUPABASE_URL="your-supabase-url"
+   NEXT_PUBLIC_SUPABASE_ANON_KEY="your-supabase-anon-key"
+   GEMINI_API_KEY="your-gemini-api-key"
+   DB_NAME="your-db-name"
+   DB_USER="your-db-username"
+   DB_PASSWORD="your-db-password"
+   DB_HOST="your-db-host"
+   DB_PORT="your-db-port"
+   DB_SSL="require"
+   SUPABASE_JWT_SECRET="your-supabase-jwt-secret"
    ```
 
 4. **Set up the database schema**
